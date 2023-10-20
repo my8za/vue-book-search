@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import { fetchBook } from "@/api/api";
+import { fetchBook, jsonServer } from "@/api/api";
 
 const store = createStore({
   state: {
@@ -14,6 +14,9 @@ const store = createStore({
     GetBooks: (context) => {
       const data = fetchBook();
       context.commit("SET_BOOK", data);
+    },
+    getJsonServer: () => {
+      jsonServer();
     },
   },
 });
