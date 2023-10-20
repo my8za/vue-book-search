@@ -11,7 +11,7 @@ export default {
     BookItemList,
   },
   mounted() {
-    this.$store.dispatch("getJsonServer");
+    this.$store.dispatch("GetBooks");
   },
 };
 </script>

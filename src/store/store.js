@@ -7,15 +7,20 @@ const store = createStore({
     jsonBooks: [],
   },
   mutations: {
+    SET_BOOK: (state, payload) => {
+      state.books = payload.documents;
+    },
+    // json-sever db.json
     SET_JSON_SERVER: (state, payload) => {
       state.jsonBooks = payload;
     },
   },
   actions: {
-    GetBooks: (context) => {
-      const data = fetchBook();
-      context.commit("SET_BOOK", data);
+    GetBooks: async ({ commit }) => {
+      const data = await fetchBook();
+      commit("SET_BOOK", data, { root: true });
     },
+    // json-sever db.json
     getJsonServer: async ({ commit }) => {
       const data = await jsonServer();
       commit("SET_JSON_SERVER", data, { root: true });
