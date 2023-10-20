@@ -1,26 +1,27 @@
 <template>
-  <div id="app">
-    {{ books }}
-    <button @click="GetBooks">fetch books</button>
-    <ul>
-      <li v-for="(book, idx) in books" :key="idx"></li>
-    </ul>
-    <router-link to=/test>Test</router-link>
+  <app-header></app-header>
+  <main>
     <router-view />
-  </div>
+  </main>
+  <app-footer></app-footer>
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import AppFooter from "./layout/components/AppFooter.vue";
+import AppHeader from "./layout/components/AppHeader.vue";
 export default {
-  data() {
-    return {};
-  },
-  computed: {
-    ...mapState(["books"]),
-  },
-  methods: {
-    ...mapActions(["GetBooks"]),
+  components: {
+    AppHeader,
+    AppFooter,
   },
 };
 </script>
+
+<style scoped>
+main {
+  height: calc(100vh - 88px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

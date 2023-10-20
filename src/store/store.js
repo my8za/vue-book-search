@@ -4,10 +4,11 @@ import { fetchBook, jsonServer } from "@/api/api";
 const store = createStore({
   state: {
     books: [],
+    jsonBooks: [],
   },
-  mutaions: {
-    SET_BOOK: (state, payload) => {
-      console.log(payload);
+  mutations: {
+    SET_JSON_SERVER: (state, payload) => {
+      state.jsonBooks = payload;
     },
   },
   actions: {
@@ -15,8 +16,9 @@ const store = createStore({
       const data = fetchBook();
       context.commit("SET_BOOK", data);
     },
-    getJsonServer: () => {
-      jsonServer();
+    getJsonServer: async ({ commit }) => {
+      const data = await jsonServer();
+      commit("SET_JSON_SERVER", data, { root: true });
     },
   },
 });

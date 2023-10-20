@@ -44,7 +44,6 @@ export const fetchBook = async () => {
 export const jsonServer = async () => {
   try {
     const resp = await axios.get(`http://localhost:3000/documents`);
-    console.log(resp);
     return resp.data;
   } catch (err) {
     console.log(err);
