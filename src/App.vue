@@ -1,15 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app">
+    {{ books }}
+    <button @click="GetBooks">fetch books</button>
+    <ul>
+      <li v-for="(book, idx) in books" :key="idx"></li>
+    </ul>
+    <router-link to=/test>Test</router-link>
+    <router-view />
+  </div>
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 export default {
-  name: "App",
-  components: {},
-  created() {},
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapState(["books"]),
+  },
   methods: {
-    fetchData() {},
+    ...mapActions(["GetBooks"]),
   },
 };
 </script>
