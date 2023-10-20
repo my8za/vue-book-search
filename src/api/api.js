@@ -40,3 +40,13 @@ export const fetchBook = async () => {
   const resp = await API_URL.get(`title`);
   return resp.data;
 };
+
+export const jsonServer = async () => {
+  try {
+    const resp = await axios.get(`http://localhost:3000/documents`);
+    console.log(resp);
+    return resp.data;
+  } catch (err) {
+    console.log(err);
+  }
+};
