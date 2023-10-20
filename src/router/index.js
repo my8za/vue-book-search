@@ -11,6 +11,7 @@ const routes = [
     path: "/book/:id",
     name: "book-detail",
     component: () => import("@/views/BookDetail"),
+    props: true,
   },
 ];
 
