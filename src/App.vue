@@ -7,6 +7,7 @@
     </ul>
     <router-link to=/test>Test</router-link>
     <router-view />
+    lsdjgajgl
   </div>
 </template>
 
