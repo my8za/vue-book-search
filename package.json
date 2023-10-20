@@ -11,7 +11,9 @@
     "axios": "^1.5.1",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
-    "vuex": "^4.1.0"
+    "vue-router": "^4.2.5",
+    "vue-template-compiler": "^2.7.14",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
