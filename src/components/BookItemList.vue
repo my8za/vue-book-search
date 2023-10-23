@@ -1,9 +1,11 @@
 <template>
-  <ul v-for="book in books" :key="book.id">
-    <li @click="goToDetail(book)">
-      <img :src="book.thumbnail" :alt="book.title" />
-      <p>{{ book.title }}</p>
-      <p v-for="author in book.authors" :key="author">{{ author }}</p>
+  <ul class="book-list-wrap">
+    <li v-for="book in books" :key="book.id">
+      <div @click="goToDetail(book)">
+        <img :src="book.thumbnail" :alt="book.title" />
+        <p>{{ book.title }}</p>
+        <p v-for="author in book.authors" :key="author">{{ author }}</p>
+      </div>
     </li>
   </ul>
 </template>
@@ -27,4 +29,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.book-list-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  list-style-type: none;
+}
+</style>

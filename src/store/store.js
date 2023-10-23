@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import { fetchBook, jsonServer } from "@/api/api";
+import { fetchBook, jsonServer, searchBook } from "@/api/api";
 
 const store = createStore({
   state: {
@@ -24,6 +24,11 @@ const store = createStore({
       const data = await fetchBook();
       commit("SET_BOOK", data, { root: true });
     },
+    GetSearchBooks: async ({ commit }, payload) => {
+      const data = await searchBook(payload);
+      commit("SET_BOOK", data, { root: true });
+    },
+
     // json-sever db.json
     getJsonServer: async ({ commit }) => {
       const data = await jsonServer();
