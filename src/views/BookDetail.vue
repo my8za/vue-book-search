@@ -12,7 +12,9 @@
         <p>정가 {{ selectedBook.price }}</p>
         <p>판매가 {{ selectedBook.sale_price }}</p>
         <p>출판사 {{ selectedBook.publisher }}</p>
-        <p>{{ selectedBook.contents ? selectedBook.contents : "" }}</p>
+        <p>
+          {{ selectedBook.contents ? selectedBook.contents : "" }}
+        </p>
         <p><a :href="selectedBook.url" target="_blank">링크</a></p>
         {{ console.log(selectedBook) }}
       </div>

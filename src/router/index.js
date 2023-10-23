@@ -5,7 +5,7 @@ const routes = [
   {
     path: "/book",
     name: "books",
-    component: () => import("@/views/Book"),
+    component: () => import("@/views/Books"),
   },
   {
     path: "/book/:bookId",

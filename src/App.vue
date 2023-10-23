@@ -19,9 +19,10 @@ export default {
 
 <style scoped>
 main {
-  height: calc(100vh - 88px);
+  /* height: calc(100vh - 88px); */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 </style>
