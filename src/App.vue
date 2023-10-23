@@ -1,9 +1,11 @@
 <template>
-  <app-header></app-header>
-  <main>
-    <router-view />
-  </main>
-  <app-footer></app-footer>
+  <v-app id="inspire">
+    <app-header></app-header>
+    <main>
+      <router-view />
+    </main>
+    <app-footer></app-footer>
+  </v-app>
 </template>
 
 <script>

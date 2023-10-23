@@ -28,6 +28,7 @@ export default {
   methods: {
     searchBook() {
       this.$store.dispatch("GetSearchBooks", this.keyword);
+      this.$router.push({ name: "books" });
     },
   },
 };
