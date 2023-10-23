@@ -5,6 +5,7 @@ const store = createStore({
   state: {
     books: [],
     jsonBooks: [],
+    selectedBook: {},
   },
   mutations: {
     SET_BOOK: (state, payload) => {
@@ -13,6 +14,9 @@ const store = createStore({
     // json-sever db.json
     SET_JSON_SERVER: (state, payload) => {
       state.jsonBooks = payload;
+    },
+    DELIVER_BOOK: (state, payload) => {
+      state.selectedBook = payload;
     },
   },
   actions: {

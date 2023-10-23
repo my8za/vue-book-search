@@ -4,14 +4,13 @@ const routes = [
   { path: "/", name: "index", component: () => import("@/views") },
   {
     path: "/book",
-    name: "book",
+    name: "books",
     component: () => import("@/views/Book"),
   },
   {
-    path: "/book/:id",
-    name: "book-detail",
+    path: "/book/:bookId",
+    name: "book",
     component: () => import("@/views/BookDetail"),
-    props: true,
   },
 ];
 
