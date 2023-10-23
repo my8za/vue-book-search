@@ -1,8 +1,13 @@
 <template>
-  <header>
-    <h1>merong</h1>
-    <gnb-menu></gnb-menu>
-  </header>
+  <v-app-bar extended>
+    <div class="v-toolbar__content">
+      <v-app-bar-title><a href="/">merong</a></v-app-bar-title>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-spacer></v-spacer>
+      <v-btn icon="mdi-dots-vertical"> </v-btn>
+      <gnb-menu></gnb-menu>
+    </div>
+  </v-app-bar>
 </template>
 
 <script>

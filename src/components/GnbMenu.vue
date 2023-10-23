@@ -7,13 +7,7 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      menus: ["book", "login"],
-    };
-  },
-};
+export default {};
 </script>
 
 <style></style>
