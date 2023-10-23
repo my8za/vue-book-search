@@ -28,9 +28,9 @@ API_URL.interceptors.response.use(
   }
 );
 
-// 도서 불러오기, 기본값 무라카미
+// 도서 불러오기
 export const fetchBook = async () => {
-  const resp = await API_URL.get("target=title&query=무라카미");
+  const resp = await API_URL.get("target=title&query=해리포터");
   return resp.data;
 };
 
@@ -40,6 +40,7 @@ export const searchBook = async (keyword) => {
   const params = {
     query: keyword,
     sort: "accuracy", // accuracy | recency 정확도 or 최신
+    size: 20,
   };
   const resp = await API_URL.get("target=title", { params });
   console.log(resp.data);
